@@ -26,13 +26,13 @@ This add-on is using Ingress to embed its interface securely into Home Assistant
 ## Installation
 
 1. Go to your Home Assistant web UI, "Supervisor" > "Add-on Store",
- Click 3-dots menu at upper right > "Repositories" and add this
- repository URL: [https://github.com/vicfergar/addon-floorplan3d](https://github.com/vicfergar/addon-floorplan3d)
+   Click 3-dots menu at upper right > "Repositories" and add this
+   repository URL: [https://github.com/vicfergar/addon-floorplan3d](https://github.com/vicfergar/addon-floorplan3d)
 1. Scroll down the page to find the new repository, and click the
- new add-on named "Floorplan 3D"
+   new add-on named "Floorplan 3D"
 1. Click "Install" and give it a few minutes to finish downloading.
 1. Click "Start", give it a few seconds to spin up, and then click
- the "Open Web UI" button that appears.
+   the "Open Web UI" button that appears.
 
 ## Contributing
 
