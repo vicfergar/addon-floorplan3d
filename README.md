@@ -13,7 +13,7 @@
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-3D Floorplan viewer add-on that hosts a WebGL2 wiewer made with Wave Engine 3.1 Preview 2.
+3D Floorplan viewer add-on that hosts a WebGL wiewer made with [Evergine](https://evergine.com/).
 
 ## About
 

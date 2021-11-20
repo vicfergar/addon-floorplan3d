@@ -1,8 +1,6 @@
 # Home Assistant Community Add-on: Floorplan 3D
 
-This add-on is sample that hosts a WebGL2 sample application made with Wave Engine 3.0 Preview.
-
-It is designed to be used as a startup structure for Add-ons based on [Wave Engine](https://waveengine.net/).
+This add-on is sample that hosts a WebGL sample application made with [Evergine](https://evergine.com/).
 
 ## Configuration
 
