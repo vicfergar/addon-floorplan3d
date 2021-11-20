@@ -13,7 +13,6 @@ log_level: info
 ssl: false
 certfile: fullchain.pem
 keyfile: privkey.pem
-
 ```
 
 **Note**: _This is just an example, don't copy and past it! Create your own!_
@@ -28,7 +27,7 @@ dealing with an unknown issue. Possible values are:
 - `debug`: Shows detailed debug information.
 - `info`: Normal (usually) interesting events.
 - `warning`: Exceptional occurrences that are not errors.
-- `error`:  Runtime errors that do not require immediate action.
+- `error`: Runtime errors that do not require immediate action.
 - `fatal`: Something went terribly wrong. Add-on becomes unusable.
 
 Please note that each level automatically includes log messages from a
