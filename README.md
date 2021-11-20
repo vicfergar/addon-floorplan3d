@@ -80,11 +80,11 @@ SOFTWARE.
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [commits-shield]: https://img.shields.io/github/commit-activity/y/vicfergar/addon-floorplan3d.svg
-[commits]: https://github.com/vicfergar/addon-floorplan3d/commits/master
+[commits]: https://github.com/vicfergar/addon-floorplan3d/commits/main
 [contributors]: https://github.com/vicfergar/addon-floorplan3d/graphs/contributors
-[docs]: https://github.com/vicfergar/addon-floorplan3d/blob/master/wave-sample/DOCS.md
+[docs]: https://github.com/vicfergar/addon-floorplan3d/blob/main/wave-sample/DOCS.md
 [vicfergar]: https://github.com/vicfergar
-[gitlabci-shield]: https://gitlab.com/vicfergar/addon-floorplan3d/badges/master/pipeline.svg
+[gitlabci-shield]: https://gitlab.com/vicfergar/addon-floorplan3d/badges/main/pipeline.svg
 [gitlabci]: https://gitlab.com/vicfergar/addon-floorplan3d/pipelines
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/vicfergar/addon-floorplan3d/issues
