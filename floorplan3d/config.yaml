@@ -5,7 +5,6 @@ slug: floorplan3d
 description: 3D Floorplan viewer add-on that hosts a WebGL wiewer made with Evergine
 url: https://github.com/vicfergar/addon-floorplan3d
 ingress: true
-ingress_port: 0
 ingress_stream: true
 panel_icon: mdi:floor-plan
 init: false
