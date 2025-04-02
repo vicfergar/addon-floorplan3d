@@ -1,51 +1,15 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.2.3
-# hadolint ignore=DL3006
-FROM ${BUILD_FROM}
+# Use the ASP.NET runtime image to run the application
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
 
-# Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+RUN apt-get update && apt-get install -y wget unzip && \
+    wget https://github.com/vicfergar/Floorplan3D/releases/download/v0.3-alpha/app.zip -O /tmp/app.zip && \
+    unzip /tmp/app.zip -d /app && \
+    rm /tmp/app.zip && \
+    apt-get remove -y wget unzip && apt-get autoremove -y && apt-get clean
 
-# Setup base
-# hadolint ignore=DL3003
-RUN \
-    apk add --no-cache \
-        nginx=1.20.2-r0 \
-    \
-    && curl -J -L -o /tmp/wwwroot.zip \
-      "https://github.com/vicfergar/Floorplan3D/releases/download/v0.2-alpha/wwwroot.zip" \
-    \
-    && mkdir -p /var/www/html \
-    && unzip -d /var/www/html /tmp/wwwroot.zip \
-    \
-    && rm -fr /tmp/*
+ENV ASPNETCORE_URLS=http://0.0.0.0:8099
 
-# Copy root filesystem
-COPY rootfs /
+EXPOSE 8099
 
-# Build arguments
-ARG BUILD_ARCH
-ARG BUILD_DATE
-ARG BUILD_DESCRIPTION
-ARG BUILD_NAME
-ARG BUILD_REF
-ARG BUILD_REPOSITORY
-ARG BUILD_VERSION
-
-# Labels
-LABEL \
-    io.hass.name="${BUILD_NAME}" \
-    io.hass.description="${BUILD_DESCRIPTION}" \
-    io.hass.arch="${BUILD_ARCH}" \
-    io.hass.type="addon" \
-    io.hass.version=${BUILD_VERSION} \
-    maintainer="Victor Ferrer <vicfergar@gmail.com>" \
-    org.opencontainers.image.title="${BUILD_NAME}" \
-    org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Victor Ferrer <vicfergar@gmail.com>" \
-    org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
-    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
-    org.opencontainers.image.created=${BUILD_DATE} \
-    org.opencontainers.image.revision=${BUILD_REF} \
-    org.opencontainers.image.version=${BUILD_VERSION}
+ENTRYPOINT ["dotnet", "Floorplan3D.Web.Server.dll"]

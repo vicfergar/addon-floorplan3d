@@ -19,20 +19,13 @@
 
 This add-on is still under development.
 
-This add-on is using Ingress to embed its interface securely into Home Assistant.
-
-[:books: Read the full add-on documentation][docs]
+This add-on now runs an Evergine Web project based on ASP.NET. It provides a 3D Floorplan viewer using WebGL.
 
 ## Installation
 
-1. Go to your Home Assistant web UI, "Supervisor" > "Add-on Store",
-   Click 3-dots menu at upper right > "Repositories" and add this
-   repository URL: [https://github.com/vicfergar/addon-floorplan3d](https://github.com/vicfergar/addon-floorplan3d)
-1. Scroll down the page to find the new repository, and click the
-   new add-on named "Floorplan 3D"
-1. Click "Install" and give it a few minutes to finish downloading.
-1. Click "Start", give it a few seconds to spin up, and then click
-   the "Open Web UI" button that appears.
+1. Follow the steps to add this repository to Home Assistant.
+2. Install the add-on and start it.
+3. Access the Web UI to view your 3D Floorplan.
 
 ## Contributing
 

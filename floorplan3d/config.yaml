@@ -2,7 +2,7 @@
 name: Floorplan 3D
 version: dev
 slug: floorplan3d
-description: 3D Floorplan viewer add-on that hosts a WebGL wiewer made with Evergine
+description: 3D Floorplan viewer add-on that hosts a WebGL viewer made with Evergine
 url: https://github.com/vicfergar/addon-floorplan3d
 ingress: true
 ingress_stream: true
@@ -16,9 +16,9 @@ arch:
   - armv7
   - i386
 ports:
-  80/tcp: null
+  8099/tcp: null
 ports_description:
-  80/tcp: Web interface (Not required for Ingress)
+  8099/tcp: ASP.NET Web Application
 hassio_api: true
 hassio_role: homeassistant
 homeassistant_api: true
@@ -26,11 +26,6 @@ auth_api: true
 map:
   - ssl
 options:
-  ssl: true
-  certfile: fullchain.pem
-  keyfile: privkey.pem
+  ssl: false
 schema:
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
   ssl: bool
-  certfile: str
-  keyfile: str
